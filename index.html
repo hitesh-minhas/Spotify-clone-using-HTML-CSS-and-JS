@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="mainContainer flex">
+        <div class="left m1 rounded">
+            <div class="LeftUpper rounded">
+                <img src="Images/logo.svg" alt="Spotify" style="height: 31px; margin-bottom: 3px" />
+                <img src="Images/cross.svg" alt="cross" id="cross" />
+                <div class="home flex gap align">
+                    <img src="Images/home.svg" alt="Home" />
+                    <h3>Home</h3>
+                </div>
+                <div class="search flex gap align">
+                    <img src="Images/search.svg" alt="Search" />
+                    <h3>Search</h3>
+                </div>
+            </div>
+            <div class="LeftLower rounded">
+                <div class="LibraryUpper">
+                    <img src="Images/library.svg" alt="Your Library" />
+                    <h3>Your Library</h3>
+                </div>
+                <div class="LibraryLower"></div>
+                <div class="leftfooter">
+                    <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a>
+                    <a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a>
+                    <a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    <a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a>
+                    <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a>
+                    <a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a>
+
+                </div>
+            </div>
+        </div>
+        <div class="right m1 rounded">
+            <nav class="">
+                <div class="navleftside">
+                    <div class="navimg">
+                        <img src="Images/hamburger.svg" alt="hamburger" id="hamburger" />
+                        <img src="Images/bx-chevron-left.svg" alt="Left" />
+                        <img src="Images/bx-chevron-right.svg" alt="Right" />
+                    </div>
+                </div>
+                <div class="navrightside">
+                    <button id="signin">Sign in</button>
+                    <button id="login">Log in</button>
+                </div>
+            </nav>
+            <h2 style="padding: 22px">Your Top Playlists</h2>
+            <div class="playlists">
+                
+            </div>
+        </div>
+    </div>
+    <div class="footer rounded">
+        <div class="FooterUpper">
+            <div class="footerleft">
+                <div class="footersongimg">
+                    <img src="Images/music.svg" alt="Music" />
+                </div>
+                <div class="footersonginfo">
+                    <p class="title">Title</p>
+                </div>
+            </div>
+            <div class="footermid">
+                <img src="Images/previous.svg" alt="Previous" id="previous" />
+                <img src="Images/play.svg" alt="Play" style="filter: invert(1); width: 33px" id="play" />
+                <img src="Images/next.svg" alt="next" id="next" />
+            </div>
+            <div class="footerright">
+                <img src="Images/volume.svg" alt="Volume" id="volumeimg" />
+                <input type="range" name="volume" id="volume" />
+            </div>
+        </div>
+        <div class="FooterLower">
+            <p class="songtime"></p>
+            <div class="seekbar">
+                <div class="seekbarcircle"></div>
+            </div>
+            <p class="duration"></p>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

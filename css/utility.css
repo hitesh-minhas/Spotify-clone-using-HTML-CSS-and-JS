@@ -1,0 +1,85 @@
+:root {
+    --track-color: #1db954;
+    --thumb-color: white;
+}
+
+.m1 {
+    margin: 6px;
+}
+
+.p1 {
+    padding: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify {
+    justify-content: center;
+}
+
+.align {
+    align-items: center;
+}
+
+.border {
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.gap {
+    gap: 15px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1e1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #999;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 75%;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 75%;
+    height: 5px;
+    border-radius: 8px;
+    background: var(--track-color);
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background: var(--thumb-color);
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
