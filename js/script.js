@@ -11,6 +11,13 @@ currentSong.addEventListener('loadeddata', () => {
 // ***************************************************************************************************************
 async function GetSongs(folder) {
     currentFolder = folder;
+    try {
+        let Songs = await fetch(`/${folder}/`);
+        if (!Songs.ok) throw new Error("Failed to fetch songs");
+        let response = await Songs.text();
+    } catch (error) {
+        console.error(error);
+    }
     Songs = await fetch(`/${folder}/`)
     let response = await Songs.text()
     let div = document.createElement("div")
@@ -134,13 +141,14 @@ function playsong(element, pause = false) {
 async function DisplayAlbums() {
     let Albums = await fetch('/songs/')
     let response = await Albums.text()
+    console.log(response);
     let div = document.createElement("div")
     div.innerHTML = response;
     let AllLinks = div.getElementsByTagName('a')
     let folderNames = []
     for (let index = 0; index < AllLinks.length; index++) {
         const element = AllLinks[index];
-        if (element.href.includes("/songs/")) {
+        if (element.href.includes("/songs/") && !element.href.includes("/songs/.htaccess")) {
             folderNames.push(element.href.split("/")[4])
         }
     }
